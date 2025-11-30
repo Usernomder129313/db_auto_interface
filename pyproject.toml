@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=70", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,11 +8,16 @@ version = "1.0.0"
 description = "Автоматический генератор desktop интерфейса для PostgreSQL БД"
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"  
+
+# Корректный формат лицензии
+license = { file = "LICENSE" }
+
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    { name = "Your Name", email = "your.email@example.com" }
 ]
+
 keywords = ["database", "postgresql", "gui", "tkinter", "crud", "interface"]
+
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -28,6 +33,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
 dependencies = [
     "psycopg2-binary>=2.9.0",
 ]
@@ -44,3 +50,10 @@ db-auto-interface = "db_auto_interface.ui.main_app:main"
 [project.urls]
 "Bug Reports" = "https://github.com/yourusername/db_auto_interface/issues"
 "Source" = "https://github.com/yourusername/db_auto_interface"
+"Documentation" = "https://github.com/yourusername/db_auto_interface#readme"
+
+[tool.setuptools.packages.find]
+include = ["db_auto_interface*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]
