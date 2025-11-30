@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,8 +8,7 @@ version = "1.0.0"
 description = "Автоматический генератор desktop интерфейса для PostgreSQL БД"
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
-license-files = ["LICENSE"]
+license = "MIT"  
 authors = [
     {name = "Your Name", email = "your.email@example.com"}
 ]
@@ -45,10 +44,3 @@ db-auto-interface = "db_auto_interface.ui.main_app:main"
 [project.urls]
 "Bug Reports" = "https://github.com/yourusername/db_auto_interface/issues"
 "Source" = "https://github.com/yourusername/db_auto_interface"
-"Documentation" = "https://github.com/yourusername/db_auto_interface#readme"
-
-[tool.setuptools]
-packages = ["db_auto_interface", "db_auto_interface.core", "db_auto_interface.ui", "db_auto_interface.utils"]
-
-[tool.setuptools.package-data]
-"*" = ["*.txt", "*.md"]
