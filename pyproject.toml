@@ -1,21 +1,31 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "db-auto-interface"
 version = "1.0.0"
-authors = [
-  { name = "Your Name", email = "your-email@example.com" },
-]
 description = "Автоматический генератор desktop интерфейса для PostgreSQL БД"
 readme = "README.md"
-license = "MIT"
-keywords = ["postgresql", "database", "gui", "auto-generator"]
+requires-python = ">=3.8"
+license = {text = "MIT"}
+license-files = ["LICENSE"]
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["database", "postgresql", "gui", "tkinter", "crud", "interface"]
 classifiers = [
     "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
     "Intended Audience :: Education",
+    "Topic :: Database",
+    "Topic :: Database :: Front-Ends",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
@@ -23,5 +33,22 @@ dependencies = [
     "psycopg2-binary>=2.9.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+]
+
+[project.scripts]
+db-auto-interface = "db_auto_interface.ui.main_app:main"
+
 [project.urls]
-Homepage = "https://github.com/your-username/db_auto_interface"
+"Bug Reports" = "https://github.com/yourusername/db_auto_interface/issues"
+"Source" = "https://github.com/yourusername/db_auto_interface"
+"Documentation" = "https://github.com/yourusername/db_auto_interface#readme"
+
+[tool.setuptools]
+packages = ["db_auto_interface", "db_auto_interface.core", "db_auto_interface.ui", "db_auto_interface.utils"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]
