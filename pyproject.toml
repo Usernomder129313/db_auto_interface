@@ -10,7 +10,7 @@ authors = [
 ]
 description = "Автоматический генератор desktop интерфейса для PostgreSQL БД"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 keywords = ["postgresql", "database", "gui", "auto-generator"]
 classifiers = [
     "Development Status :: 4 - Beta",
