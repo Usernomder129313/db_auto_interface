@@ -23,6 +23,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/yourusername/db_auto_interface",
+    license="MIT",
     packages=find_packages(exclude=["tests", "tests.*", "*.tests", "*.tests.*"]),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -50,5 +51,4 @@ setup(
     zip_safe=False,
     keywords="database, postgresql, gui, tkinter, crud, interface, auto-generator",
 )
-
 
