@@ -16,7 +16,7 @@ else:
 
 setup(
     name="db-auto-interface",
-    version="1.0.0",
+    version="2.0.0",
     author="Your Name",
     author_email="your.email@example.com",
     description="Автоматический генератор desktop интерфейса для PostgreSQL БД",
