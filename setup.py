@@ -1,5 +1,5 @@
 """
-Setup script для установки библиотеки db_auto_interface через pip
+Setup script для установки библиотеки db_auto_interface
 """
 
 from setuptools import setup, find_packages
@@ -16,15 +16,14 @@ else:
 
 setup(
     name="db-auto-interface",
-    version="2.0.0",
+    version="1.0.0",
     author="Your Name",
     author_email="your.email@example.com",
     description="Автоматический генератор desktop интерфейса для PostgreSQL БД",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/yourusername/db_auto_interface",
-    license="MIT",
-    packages=find_packages(exclude=["tests", "tests.*", "*.tests", "*.tests.*"]),
+    packages=find_packages(exclude=["tests", "tests.*"]),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
@@ -37,11 +36,19 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.8",
-    # Зависимости определены в pyproject.toml
-    # install_requires и extras_require будут взяты из pyproject.toml
+    install_requires=[
+        "psycopg2-binary>=2.9.0",
+    ],
+    extras_require={
+        "dev": [
+            "pytest>=7.0.0",
+            "black>=22.0.0",
+        ],
+    },
     entry_points={
         'console_scripts': [
             'db-auto-interface=db_auto_interface.ui.main_app:main',
@@ -49,6 +56,10 @@ setup(
     },
     include_package_data=True,
     zip_safe=False,
-    keywords="database, postgresql, gui, tkinter, crud, interface, auto-generator",
+    keywords="database, postgresql, gui, tkinter, crud, interface",
+    project_urls={
+        "Bug Reports": "https://github.com/yourusername/db_auto_interface/issues",
+        "Source": "https://github.com/yourusername/db_auto_interface",
+    },
 )
 
