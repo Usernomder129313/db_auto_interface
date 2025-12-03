@@ -5,7 +5,6 @@ Setup script для установки библиотеки db_auto_interface
 from setuptools import setup, find_packages
 import os
 
-# Читаем README для long_description
 readme_path = os.path.join(os.path.dirname(__file__), "README.md")
 long_description = ""
 if os.path.exists(readme_path):
@@ -62,4 +61,5 @@ setup(
         "Source": "https://github.com/yourusername/db_auto_interface",
     },
 )
+
 
