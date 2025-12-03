@@ -8,7 +8,7 @@ db_auto_interface - Универсальная библиотека для ав�
 from .core.universal_db import UniversalDB
 from .ui.main_app import DBAutoInterface
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 __author__ = "Your Name"
 __email__ = "your.email@example.com"
 
